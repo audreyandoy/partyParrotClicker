@@ -4,20 +4,20 @@ const state = {
 
 
 const mouseoverEffect = (event) => {
-    const mouseoverEffect = document.querySelector('#box-mouseover');
+    const mouseoverEffect = document.querySelector('#box-one');
     mouseoverEffect.style.backgroundColor = "pink";
     console.log("mouseover?")
 }
 
 const mouseleaveEffect = (event) => {
-    const mouseoverEffect = document.querySelector('#box-mouseover');
+    const mouseoverEffect = document.querySelector('#box-one');
     mouseoverEffect.style.backgroundColor = "transparent";
     console.log("mouseleave?")
 }
 
 const spacebarEffect = (event) => {
     console.log("space");
-    const spacebarBox = document.querySelector('#box-keydown p');
+    const spacebarBox = document.querySelector('#box-two p');
 
     if (event.keyCode == 32) {
         spacebarBox.innerHTML = "<h1>🍮</h1> ";        
@@ -25,7 +25,7 @@ const spacebarEffect = (event) => {
 }
 
 const keyUpEffect = (event) => {
-    const spacebarBox = document.querySelector('#box-keydown p');
+    const spacebarBox = document.querySelector('#box-two p');
 
     if (event.keyCode == 32) {
         spacebarBox.textContent = "press space";     
@@ -33,7 +33,7 @@ const keyUpEffect = (event) => {
 }
 
 const clickEffect = event => {
-    const clickBox = document.querySelector('#box-click');
+    const clickBox = document.querySelector('#box-three');
     if (state.clicked == false) {
         clickBox.style.backgroundImage = "url(https://cultofthepartyparrot.com/parrots/hd/parrot.gif)"
         state.clicked = true;
@@ -49,9 +49,9 @@ const dblClickEffect = (event) => {
 }
 
 const registerEventHandlers = (event) => {
-    const mouseoverBox = document.querySelector('#box-mouseover');
-    const clickBox = document.querySelector('#box-click');
-    const dblClickBox = document.querySelector('#box-dblclick');
+    const mouseoverBox = document.querySelector('#box-one');
+    const clickBox = document.querySelector('#box-three');
+    const dblClickBox = document.querySelector('#box-four');
     clickBox.addEventListener("click", clickEffect);
     dblClickBox.addEventListener("dblclick", dblClickEffect);
 
